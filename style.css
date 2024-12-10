@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Railroad Gothic';
+    src: url('./RailroadGothicCC.ttf') format('truetype');
+}
+
+body{
+    font-family: "Jost", sans-serif;
+}
+
+.transparent-table {
+    border-radius: 0.5rem; /* Rounded corners */
+}
+
+.transparent-table td {
+    border: 1px solid black; /* Black borders for table cells */
+}
+
+.w-10{
+    width: 11% !important;
+}
+
+.nav-bar{
+    bottom: 10px !important;
+    border: 2px solid white;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.bg-body{
+    background-color: #0B131E !important;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.h-90{
+    height: 90%;
+}
+
+.bg-containers{
+    background-color: #202B3B !important;
+}
+
+input::placeholder {
+    color: white !important;
+}
+
+.fs-7{
+    font-size: 14px !important;
+}
+
+.h-100vh{
+    height: 100vh;
+}
+
+.h-35{
+    height: 35%;
+}

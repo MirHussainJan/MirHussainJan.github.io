@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body class="bg-body row gap-2 m-0 h-100vh position-relative justify-content-between p-4 text-white">
+    <nav class="nav-bar d-flex bg-body position-fixed bottom-0 start-50 translate-middle-x w-10 rounded-3 justify-content-between p-2 shadow">
+        <a href="index.html" class="nav-link d-flex flex-column align-items-center text-black mx-2">
+          <i class="bi bi-house-fill fs-4 text-secondary"></i>
+          <span class="fs-6 text-white">Home</span>
+        </a>
+        <a href="tables.html" class="nav-link d-flex flex-column align-items-center text-black mx-2">
+          <i class="bi bi-table fs-4 text-secondary"></i>
+          <span class="fs-6 text-white">Tables</span>
+        </a>
+      </nav>
+    <div class="col-lg-7 col-md-7">
+        <div class="input d-flex gap-2 align-items-center my-1">
+            <input id="city-input" placeholder="Search for cities" type="text"
+                class="form-control rounded-3 bg-containers border-0 shadow-none text-white py-2">
+            <button id="get-weather"
+                class="button border-0 bg-secondary p-2 rounded-2 fs-7 text-black fw-bold">Search</button>
+        </div>
+
+        <div class="main row justify-content-between align-items-center">
+            <div class="left col-lg-6 col-md-6 col-sm-6">
+                <h2 id="city-name" class="city-name fw-bold">Madrid</h2>
+                <p id="rain-chance" class="text-secondary">Chance of rain: 0%</p>
+                <h1 id="temperature" class="temperature fw-bold display-3 mt-2">31°</h1>
+            </div>
+            <img id="weather-icon" src="https://cdn-icons-png.flaticon.com/512/3917/3917805.png" class="w-25"
+                width="50%" alt="">
+        </div>
+
+        <div class="todays-forecast bg-containers rounded-4 px-4 py-3">
+            <p class="text-secondary fs-6 fw-bold mb-4">TODAY'S FORECAST</p>
+            <div class="row m-0 align-items-center" id="today-forecast-details">
+                <!-- Weather forecast details will be populated here -->
+            </div>
+        </div>
+
+        <div class="Charts bg-containers rounded-4 mt-2 px-4 py-3">
+            <p class="text-secondary fs-6 fw-bold mb-4">CHARTS</p>
+            <div class="row m-0 align-items-center justify-content-between">
+                <!-- Pie Chart Section -->
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <canvas id="pieChart" width="150" height="150"></canvas>
+                </div>
+
+                <!-- Line Chart Section -->
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <canvas id="lineChart" width="150" height="150"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-lg-4 col-md-4">
+        <div class="todays-forecast h-100 bg-containers rounded-4 px-4 py-3">
+            <p class="text-secondary fs-6 fw-bold mb-2">WEEKLY FORECAST</p>
+            <div class="d-flex flex-column justify-content-between h-90" id="weekly-forecast">
+                <!-- 7-Day Forecast will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
